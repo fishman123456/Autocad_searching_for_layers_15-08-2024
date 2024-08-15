@@ -49,12 +49,13 @@ namespace Autocad_searching_for_layers_15_08_2024
             }
             // создаем список обьектов, потом в массив преобразуем и выделим в модели 24-07-2024
             List<Polyline3d> pid = new List<Polyline3d>();
+            List<ObjectId> idPoly = new List<ObjectId>();
             // считываем таблицу слоев
             LayerTable tblLayer = (LayerTable)tr.GetObject(db.LayerTableId, OpenMode.ForRead, false);
             // пробегаем по всем элементам в таблиые слоёв
             int countLay = 0;
-            foreach (ObjectId ent in idArray)
-            {
+            //foreach (ObjectId ent in idArray)
+            //{
                 BlockTable bt = tr.GetObject(db.BlockTableId, OpenMode.ForRead) as BlockTable;
                 BlockTableRecord btr = tr.GetObject(bt[BlockTableRecord.ModelSpace], OpenMode.ForRead) as BlockTableRecord;
                 foreach (ObjectId id in btr)
@@ -62,16 +63,20 @@ namespace Autocad_searching_for_layers_15_08_2024
                     if (id.ObjectClass.Name == RXClass.GetClass(typeof(Polyline3d)).Name)
                     {
                         Polyline3d polyline3D = tr.GetObject(id, OpenMode.ForRead) as Polyline3d;
-                        pid.Add(polyline3D);    
-                    }
+                        pid.Add(polyline3D);
+                        SelectionSet ss1 = SelectionSet.FromObjectIds(idPoly.ToArray());
+                        ed.SetImpliedSelection(ss1);
+                    countLay++;
                 }
-                countLay++;
-            }
+                }
+               
+            //}
             foreach (Polyline3d varible in pid)
             {
                 ed.WriteMessage(varible.Layer + " - ");
                 ed.WriteMessage(varible.Length + "\n");
             }
+            ed.WriteMessage("количество кабеля = " +countLay + "\n");
         }
     }
 }
