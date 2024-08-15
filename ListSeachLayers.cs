@@ -47,8 +47,8 @@ namespace Autocad_searching_for_layers_15_08_2024
                 Application.ShowAlertDialog("нет обьекта в чертеже");
                 return;
             }
-            // создаем список, потом в массив преобразуем и выделим в модели 24-07-2024
-            List<string> pid = new List<string>();
+            // создаем список обьектов, потом в массив преобразуем и выделим в модели 24-07-2024
+            List<Polyline3d> pid = new List<Polyline3d>();
             // считываем таблицу слоев
             LayerTable tblLayer = (LayerTable)tr.GetObject(db.LayerTableId, OpenMode.ForRead, false);
             // пробегаем по всем элементам в таблиые слоёв
@@ -62,15 +62,15 @@ namespace Autocad_searching_for_layers_15_08_2024
                     if (id.ObjectClass.Name == RXClass.GetClass(typeof(Polyline3d)).Name)
                     {
                         Polyline3d polyline3D = tr.GetObject(id, OpenMode.ForRead) as Polyline3d;
-                        pid.Add(polyline3D.Id.ToString());    
+                        pid.Add(polyline3D);    
                     }
                 }
                 countLay++;
             }
-            foreach (string varible in pid)
+            foreach (Polyline3d varible in pid)
             {
-                ed.WriteMessage(varible + " - ");
-                ed.WriteMessage(varible + "\n");
+                ed.WriteMessage(varible.Layer + " - ");
+                ed.WriteMessage(varible.Length + "\n");
             }
         }
     }
