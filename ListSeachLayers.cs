@@ -64,8 +64,9 @@ namespace Autocad_searching_for_layers_15_08_2024
                     {
                         Polyline3d polyline3D = tr.GetObject(id, OpenMode.ForRead) as Polyline3d;
                         pid.Add(polyline3D);
+                        idPoly.Add(id);
                         SelectionSet ss1 = SelectionSet.FromObjectIds(idPoly.ToArray());
-                        ed.SetImpliedSelection(ss1);
+                        ed.SetImpliedSelection(ss1.GetObjectIds());
                     countLay++;
                 }
                 }
