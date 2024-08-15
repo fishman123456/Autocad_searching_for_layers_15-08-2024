@@ -1,0 +1,115 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_searching_for_layers_15-08-2024\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E9A860F7-FF0D-45C3-A898-D3C558AF2738}|Autocad_searching_for_layers_15-08-2024.csproj|C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_searching_for_layers_15-08-2024\\listseachlayers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9A860F7-FF0D-45C3-A898-D3C558AF2738}|Autocad_searching_for_layers_15-08-2024.csproj|solutionrelative:listseachlayers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9A860F7-FF0D-45C3-A898-D3C558AF2738}|Autocad_searching_for_layers_15-08-2024.csproj|C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_searching_for_layers_15-08-2024\\checkdatework.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9A860F7-FF0D-45C3-A898-D3C558AF2738}|Autocad_searching_for_layers_15-08-2024.csproj|solutionrelative:checkdatework.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9A860F7-FF0D-45C3-A898-D3C558AF2738}|Autocad_searching_for_layers_15-08-2024.csproj|c:\\users\\fishman\\documents\\github\\autocad_searching_for_layers_15-08-2024\\commands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9A860F7-FF0D-45C3-A898-D3C558AF2738}|Autocad_searching_for_layers_15-08-2024.csproj|solutionrelative:commands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ListSeachLayers.cs",
+              "DocumentMoniker": "C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_searching_for_layers_15-08-2024\\ListSeachLayers.cs",
+              "RelativeDocumentMoniker": "ListSeachLayers.cs",
+              "ToolTip": "C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_searching_for_layers_15-08-2024\\ListSeachLayers.cs",
+              "RelativeToolTip": "ListSeachLayers.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAYwEAAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T06:03:25.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CheckDateWork.cs",
+              "DocumentMoniker": "C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_searching_for_layers_15-08-2024\\CheckDateWork.cs",
+              "RelativeDocumentMoniker": "CheckDateWork.cs",
+              "ToolTip": "C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_searching_for_layers_15-08-2024\\CheckDateWork.cs",
+              "RelativeToolTip": "CheckDateWork.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAzwBwAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T05:13:14.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Commands.cs",
+              "DocumentMoniker": "C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_searching_for_layers_15-08-2024\\Commands.cs",
+              "RelativeDocumentMoniker": "Commands.cs",
+              "ToolTip": "C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_searching_for_layers_15-08-2024\\Commands.cs",
+              "RelativeToolTip": "Commands.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAYwD0AAABpAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T05:01:10.225Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
