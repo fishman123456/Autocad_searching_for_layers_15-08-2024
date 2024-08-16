@@ -18,8 +18,22 @@ namespace Autocad_searching_for_layers_15_08_2024
         [CommandMethod("U_83_ListLayers", CommandFlags.Redraw)]
         public void ListLay()
         {
-            // проверяем по дате
+
+
+
+            // делаем видимым обьект окно в текущем пространстве 
+            UserControl1 windowSeach;
+            // проверка по дате
             CheckDateWork.CheckDate();
+
+            // проверяем на существования окна
+            if (WinCloseTwo.countWin == 0)
+            {
+                windowSeach = new UserControl1();
+                windowSeach.Show();
+                windowSeach.Activate();
+                WinCloseTwo.countWin = 1;
+            }
             Editor ed = Application.DocumentManager.MdiActiveDocument.Editor;
             Database db = HostApplicationServices.WorkingDatabase;
             var doc = Application.DocumentManager.MdiActiveDocument;
@@ -52,32 +66,53 @@ namespace Autocad_searching_for_layers_15_08_2024
             List<ObjectId> idPoly = new List<ObjectId>();
             // считываем таблицу слоев
             LayerTable tblLayer = (LayerTable)tr.GetObject(db.LayerTableId, OpenMode.ForRead, false);
-            // пробегаем по всем элементам в таблиые слоёв
+            // количество кабелей(3D polyline)
             int countLay = 0;
-            //foreach (ObjectId ent in idArray)
-            //{
-                BlockTable bt = tr.GetObject(db.BlockTableId, OpenMode.ForRead) as BlockTable;
-                BlockTableRecord btr = tr.GetObject(bt[BlockTableRecord.ModelSpace], OpenMode.ForRead) as BlockTableRecord;
-                foreach (ObjectId id in btr)
+            // количество совпадений с тексбоксом
+            int countCab = 0;
+            
+
+            BlockTable bt = tr.GetObject(db.BlockTableId, OpenMode.ForRead) as BlockTable;
+            BlockTableRecord btr = tr.GetObject(bt[BlockTableRecord.ModelSpace], OpenMode.ForRead) as BlockTableRecord;
+            // ищем по типу 3d полилинии и добавляем их в массив
+            foreach (ObjectId id in btr)
+            {
+                if (id.ObjectClass.Name == RXClass.GetClass(typeof(Polyline3d)).Name)
                 {
-                    if (id.ObjectClass.Name == RXClass.GetClass(typeof(Polyline3d)).Name)
-                    {
-                        Polyline3d polyline3D = tr.GetObject(id, OpenMode.ForRead) as Polyline3d;
-                        pid.Add(polyline3D);
-                        idPoly.Add(id);
-                        SelectionSet ss1 = SelectionSet.FromObjectIds(idPoly.ToArray());
-                        ed.SetImpliedSelection(ss1.GetObjectIds());
+                    Polyline3d polyline3D = tr.GetObject(id, OpenMode.ForRead) as Polyline3d;
+                    pid.Add(polyline3D);
+                    idPoly.Add(id);
+                    
                     countLay++;
+                   
                 }
-                }
-               
-            //}
+            }
+
+            List<ObjectId> idPolylyne = new List<ObjectId>();
             foreach (Polyline3d varible in pid)
             {
                 ed.WriteMessage(varible.Layer + " - ");
                 ed.WriteMessage(varible.Length + "\n");
+                // проходим по всем строкам из текстбокса для проверки на совпадения
+                for (int i = 0; i < WinCloseTwo.massSeach.Length; i++)
+                {
+                    // условия по совпадению с текстбоксом
+                    if(varible.Layer == WinCloseTwo.massSeach[i])
+                    {
+                        idPolylyne.Add(varible.Id);
+                        // выбор в модели 3d полилиний     
+                        countCab++;
+                    }
+                }
+                // выбор в модели 3d полилиний     
+                SelectionSet ss1 = SelectionSet.FromObjectIds(idPolylyne.ToArray());
+                ed.SetImpliedSelection(ss1.GetObjectIds());
             }
-            ed.WriteMessage("количество кабеля = " +countLay + "\n");
+            // разность сущ - искомые
+            int eqelsCab = countLay - countCab;
+            ed.WriteMessage("количество кабеля всего    = " + countLay + "\n");
+            ed.WriteMessage("количество совпадений      = " + countCab + "\n");
+            ed.WriteMessage("разность: сущ - тексбокс   = " + eqelsCab + "\n");
         }
     }
 }

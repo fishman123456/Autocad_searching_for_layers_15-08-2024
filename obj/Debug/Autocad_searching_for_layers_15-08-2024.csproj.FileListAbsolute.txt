@@ -34,3 +34,8 @@ C:\Users\Fishman\Documents\GitHub\Autocad_searching_for_layers_15-08-2024\obj\De
 C:\Users\Fishman\Documents\GitHub\Autocad_searching_for_layers_15-08-2024\obj\Debug\Autocad_.12F5A585.Up2Date
 C:\Users\Fishman\Documents\GitHub\Autocad_searching_for_layers_15-08-2024\obj\Debug\Autocad_searching_for_layers_15-08-2024.dll
 C:\Users\Fishman\Documents\GitHub\Autocad_searching_for_layers_15-08-2024\obj\Debug\Autocad_searching_for_layers_15-08-2024.pdb
+C:\Users\Fishman\Documents\GitHub\Autocad_searching_for_layers_15-08-2024\obj\Debug\UserControl1.g.cs
+C:\Users\Fishman\Documents\GitHub\Autocad_searching_for_layers_15-08-2024\obj\Debug\Autocad_searching_for_layers_15-08-2024_MarkupCompile.cache
+C:\Users\Fishman\Documents\GitHub\Autocad_searching_for_layers_15-08-2024\obj\Debug\Autocad_searching_for_layers_15-08-2024_MarkupCompile.lref
+C:\Users\Fishman\Documents\GitHub\Autocad_searching_for_layers_15-08-2024\obj\Debug\UserControl1.baml
+C:\Users\Fishman\Documents\GitHub\Autocad_searching_for_layers_15-08-2024\obj\Debug\Autocad_searching_for_layers_15-08-2024.g.resources

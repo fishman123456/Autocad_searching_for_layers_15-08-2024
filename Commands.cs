@@ -18,9 +18,8 @@ namespace Autocad_searching_for_layers_15_08_2024
 
         static public void EntitiesOnLayer()
         {
-            // проверка по дате
+            // проверяем по дате
             CheckDateWork.CheckDate();
-
             Document doc = Application.DocumentManager.MdiActiveDocument;
             Editor ed = doc.Editor;
             // вводите имя слоя по которому ищем
@@ -67,7 +66,10 @@ namespace Autocad_searching_for_layers_15_08_2024
                     ed.WriteMessage("\nИмя слоя : " + entLayer.Name);
                 }
 
-                if (selectionRes.Status == PromptStatus.OK)
+                // ищем совпадения слоёв 3Д полилиний по содержимому текстбокса 16-08-2024
+                
+
+                    if (selectionRes.Status == PromptStatus.OK)
                 {
                     // добавляем id обьекта в список
 
@@ -80,6 +82,7 @@ namespace Autocad_searching_for_layers_15_08_2024
                 {
                     return new ObjectIdCollection();
                 }
+
             }
         }
     }
