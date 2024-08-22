@@ -113,6 +113,7 @@ namespace Autocad_searching_for_layers_15_08_2024
             ed.WriteMessage("количество кабеля всего    = " + countLay + "\n");
             ed.WriteMessage("количество совпадений      = " + countCab + "\n");
             ed.WriteMessage("разность: сущ - тексбокс   = " + eqelsCab + "\n");
+            ed.WriteMessage("поиск завершен" + DateTime.Now.ToString() + "\n");
         }
     }
 }
